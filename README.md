@@ -13,6 +13,6 @@ Since Kipper is a project that already has been started, the main repository exi
 
 As such, this repository will be primarily contain the info about the technical implementation of Kipper.
 
-## Systemspecification
+## System Specification
 
 The system specification is located in a separate Markdown file [here](./Systemspezifikation.md).
