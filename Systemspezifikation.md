@@ -9,9 +9,9 @@
   - [1.4 Zielsetzung](#14-zielsetzung)
 - [2. Funktionale Anforderungen](#2-funktionale-anforderungen)
   - [2.1 Use Case Überblick](#21-use-case-überblick)
-  - [2.2 Use Case - Node.js](#22-use-case---nodejs)
+  - [2.2 Use Case - Node.js Kompilierung](#22-use-case---nodejs-kompilierung)
   - [2.3 Use Case - CLI](#23-use-case---cli)
-  - [2.4 Use Case - Web Bundle](#24-use-case---web-bundle)
+  - [2.4 Use Case - Web Bundle Kompilierung](#24-use-case---web-bundle-kompilierung)
 - [3. Nicht-funktionale Anforderungen](#3-nicht-funktionale-anforderungen)
 - [4. Mengengerüst](#4-mengengerüst)
 - [5. Systemarchitektur](#5-systemarchitektur)
@@ -220,7 +220,7 @@ Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des C
 die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese werden in den folgenden Sektionen 
 genauer beschrieben.
 
-### 2.2 Use Case - Kompilierung in Node.js
+### 2.2 Use Case - Node.js Kompilierung
 
 Da der Kipper Compiler primär im Node.js Umfeld entwickelt wird, ist es auch möglich den Compiler direkt als Node.js 
 Modul zu importieren und zu verwenden. Dieser Use-Case bietet daher auch die meiste Flexibilität, da das Verhalten 
