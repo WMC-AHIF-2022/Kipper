@@ -237,7 +237,7 @@ Interface).
 
 Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
 dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
-CLI Interfaces und Verhalten unterscheiden.
+CLI Interfaces und im Verhalten unterscheiden.
 
 Die Unterschiede vom Command `compile` zu den anderen zwei Commands `analyse` und `run` werden genauer im 
 Abschnitt 2.3.2 beschrieben.
