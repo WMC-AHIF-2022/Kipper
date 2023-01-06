@@ -215,23 +215,59 @@ bleiben, um zugänglicher für existierenden Code zu sein.
 
 ![](./img/Kipper-Use-Case-Diagram.png)
 
-### 2.2 Use Case - Node.js
+Die oben dargestellten Use Cases sind die wichtigsten Use Cases, die Kipper als Projekt unterstützen soll. Diese Use 
+Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des Compilers, jedoch beschreiben aber nur 
+die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese werden in den folgenden Sektionen 
+genauer beschrieben.
+
+### 2.2 Use Case - Kompilierung in Node.js
+
+Da der Kipper Compiler primär im Node.js Umfeld entwickelt wird, ist es auch möglich den Compiler direkt als Node.js 
+Modul zu importieren und zu verwenden. Dieser Use-Case bietet daher auch die meiste Flexibilität, da das Verhalten 
+selber auch bearbeitet/konfiguriert werden kann und mehr Optionen ermöglicht als die Flags beim CLI (Command Line 
+Interface).
 
 #### 2.2.1 Workflow
 
-<!-- TODO! Activity Diagram (ACD) -->
+![](./img/Kipper-NodeJS-ACD.png)
 
 ### 2.3 Use Case - CLI
 
 #### 2.3.1 Workflow
 
-<!-- TODO! Insert section for CLI (ACD) -->
+Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
+dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
+CLI Interfaces und Verhalten unterscheiden.
 
-### 2.4 Use Case - Web Bundle
+Die Unterschiede vom Command `compile` zu den anderen zwei Commands `analyse` und `run` werden genauer im 
+Abschnitt 2.3.2 beschrieben.
+
+##### Command `compile`
+
+![](./img/Kipper-CLI-Compile-ACD.png)
+
+##### Command `analyse`
+
+![](./img/Kipper-CLI-Analyse-ACD.png)
+
+##### Command `run`
+
+![](./img/Kipper-CLI-Run-ACD.png)
+
+#### 2.3.2 Unterschiede von `compile` zu den anderen Commands
+
+Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
+Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
+- `analyse` führt *nur* Syntax-Checks durch, ohne Target-Code zu generieren oder Semantic-Checks durchzuführen.
+- `run` kompiliert den Code und führt ihn direkt aus, und gibt auch keine Logs aus außer bei Compiler Fehlern.
+
+### 2.4 Use Case - Web Bundle Kompilierung
+
+Kipper kann ähnlich wie im Node.js Use-Case auch als Web Bundle im Browser verwendet werden. 
 
 #### 2.4.1 Workflow
 
-<!-- TODO! Insert section for Web Bundle (ACD) -->
+![](./img/Kipper-Web-ACD.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
