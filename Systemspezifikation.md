@@ -217,8 +217,8 @@ bleiben, um zugänglicher für existierenden Code zu sein.
 
 Die oben dargestellten Use Cases sind die wichtigsten Use Cases, die Kipper als Projekt unterstützen soll. Diese Use 
 Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des Compilers, jedoch beschreiben aber nur 
-die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese werden in den folgenden Sektionen 
-genauer beschrieben.
+die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese Details werden in den folgenden 
+Sektionen genauer beschrieben.
 
 ### 2.2 Use Case - Node.js Kompilierung
 
