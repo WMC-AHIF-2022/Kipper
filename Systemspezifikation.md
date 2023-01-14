@@ -9,9 +9,14 @@
   - [1.4 Zielsetzung](#14-zielsetzung)
 - [2. Funktionale Anforderungen](#2-funktionale-anforderungen)
   - [2.1 Use Case Überblick](#21-use-case-überblick)
-  - [2.2 Use Case - Node.js Kompilierung](#22-use-case---nodejs-kompilierung)
-  - [2.3 Use Case - CLI](#23-use-case---cli)
-  - [2.4 Use Case - Web Bundle Kompilierung](#24-use-case---web-bundle-kompilierung)
+  - [2.2 Use Case - Entwicklung Node.js Application](#22-use-case---entwicklung-nodejs-application)
+  - [2.3 Use Case - Entwicklung Deno Application](#23-use-case---entwicklung-deno-application)
+  - [2.4 Use Case - Entwicklung Bun Application](#24-use-case---entwicklung-bun-application)
+  - [2.5 Use Case - Entwicklung Browser Application](#25-use-case---entwicklung-browser-application)
+  - [2.6 Use Case - Code Analyse](#26-use-case---code-analyse)
+  - [2.7 Use Case - Using Node.js Compiler](#27-use-case---using-nodejs-compiler)
+  - [2.8 Use Case - Using Kipper CLI](#28-use-case---using-kipper-cli)
+  - [2.9 Use Case - Using Web Bundle Compiler](#29-use-case---using-web-bundle-compiler)
 - [3. Nicht-funktionale Anforderungen](#3-nicht-funktionale-anforderungen)
 - [4. Mengengerüst](#4-mengengerüst)
 - [5. Systemarchitektur](#5-systemarchitektur)
@@ -220,20 +225,30 @@ Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des C
 die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese werden in den folgenden Sektionen 
 genauer beschrieben.
 
-### 2.2 Use Case - Node.js Kompilierung
+### 2.2 Use Case - Entwicklung Node.js Application
+
+### 2.3 Use Case - Entwicklung Deno Application
+
+### 2.4 Use Case - Entwicklung Bun Application
+
+### 2.5 Use Case - Entwicklung Browser Application
+
+### 2.6 Use Case - Code Analyse
+
+### 2.7 Use Case - Using Node.js Compiler
 
 Da der Kipper Compiler primär im Node.js Umfeld entwickelt wird, ist es auch möglich den Compiler direkt als Node.js 
 Modul zu importieren und zu verwenden. Dieser Use-Case bietet daher auch die meiste Flexibilität, da das Verhalten 
 selber auch bearbeitet/konfiguriert werden kann und mehr Optionen ermöglicht als die Flags beim CLI (Command Line 
 Interface).
 
-#### 2.2.1 Workflow
+#### 2.7.1 Workflow
 
 ![](./img/Kipper-NodeJS-ACD.png)
 
-### 2.3 Use Case - CLI
+### 2.8 Use Case - Using Kipper CLI
 
-#### 2.3.1 Workflow
+#### 2.5.1 Workflow
 
 Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
 dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
@@ -254,18 +269,19 @@ Abschnitt 2.3.2 beschrieben.
 
 ![](./img/Kipper-CLI-Run-ACD.png)
 
-#### 2.3.2 Unterschiede von `compile` zu den anderen Commands
+#### 2.5.2 Unterschiede von `compile` zu den anderen Commands
 
 Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
 Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
 - `analyse` führt *nur* Syntax-Checks durch, ohne Target-Code zu generieren oder Semantic-Checks durchzuführen.
 - `run` kompiliert den Code und führt ihn direkt aus, und gibt auch keine Logs aus außer bei Compiler Fehlern.
 
-### 2.4 Use Case - Web Bundle Kompilierung
+### 2.9 Use Case - Using Web Bundle Compiler
 
-Kipper kann ähnlich wie im Node.js Use-Case auch als Web Bundle im Browser verwendet werden. 
+Kipper kann ähnlich wie im Node.js Use-Case auch als Web Bundle im Browser verwendet werden. Das bedeutet das der Kipper
+code in einem Browser zu JavaScript/TypeScript kompiliert werden kann, sowohl als auch ausgeführt werden kann.
 
-#### 2.4.1 Workflow
+#### 2.6.1 Workflow
 
 ![](./img/Kipper-Web-ACD.png)
 
