@@ -222,8 +222,8 @@ bleiben, um zugänglicher für existierenden Code zu sein.
 
 Die oben dargestellten Use Cases sind die wichtigsten Use Cases, die Kipper als Projekt unterstützen soll. Diese Use 
 Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des Compilers, jedoch beschreiben aber nur 
-die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese werden in den folgenden Sektionen 
-genauer beschrieben.
+die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese Details werden in den folgenden 
+Sektionen genauer beschrieben.
 
 ### 2.2 Use Case - Entwicklung Node.js Application
 
@@ -252,7 +252,7 @@ Interface).
 
 Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
 dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
-CLI Interfaces und Verhalten unterscheiden.
+CLI Interfaces und im Verhalten unterscheiden.
 
 Die Unterschiede vom Command `compile` zu den anderen zwei Commands `analyse` und `run` werden genauer im 
 Abschnitt 2.3.2 beschrieben.
