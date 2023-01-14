@@ -260,17 +260,11 @@ CLI Interfaces und im Verhalten unterscheiden.
 Die Unterschiede vom Command `compile` zu den anderen zwei Commands `analyse` und `run` werden genauer im 
 Abschnitt 2.3.2 beschrieben.
 
-##### Command `compile`
+ACD Diagramme der einzelnen Commands:
 
-[Kipper-CLI-Compile-ACD.pn](./img/Kipper-CLI-Compile-ACD.png)
-
-##### Command `analyse`
-
-[Kipper-CLI-Analyse-ACD.png](./img/Kipper-CLI-Analyse-ACD.png)
-
-##### Command `run`
-
-[Kipper-CLI-Run-ACD.png](./img/Kipper-CLI-Run-ACD.png)
+- `compile`: [Kipper-CLI-Compile-ACD.pn](./img/Kipper-CLI-Compile-ACD.png)
+- `analyse`: [Kipper-CLI-Analyse-ACD.png](./img/Kipper-CLI-Analyse-ACD.png)
+- `run`: [Kipper-CLI-Run-ACD.png](./img/Kipper-CLI-Run-ACD.png)
 
 #### 2.8.2 Unterschiede von `compile` zu den anderen Commands
 
