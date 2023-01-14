@@ -216,6 +216,9 @@ bleiben, um zugänglicher für existierenden Code zu sein.
 
 ## 2. Funktionale Anforderungen
 
+*Durch die Größe mancher Diagramme werden sie nicht direkt im Dokument hinzugefügt, sondern als Link zu einer externen
+Quelle. Diese können mit einem Klick auf das Link geöffnet werden.*
+
 ### 2.1 Use Case Überblick
 
 ![](./img/Kipper-Use-Case-Diagram.png)
@@ -244,11 +247,11 @@ Interface).
 
 #### 2.7.1 Workflow
 
-![](./img/Kipper-NodeJS-ACD.png)
+[Kipper-NodeJS-ACD.png](./img/Kipper-NodeJS-ACD.png)
 
 ### 2.8 Use Case - Using Kipper CLI
 
-#### 2.5.1 Workflow
+#### 2.8.1 Workflow
 
 Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
 dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
@@ -259,17 +262,17 @@ Abschnitt 2.3.2 beschrieben.
 
 ##### Command `compile`
 
-![](./img/Kipper-CLI-Compile-ACD.png)
+[Kipper-CLI-Compile-ACD.pn](./img/Kipper-CLI-Compile-ACD.png)
 
 ##### Command `analyse`
 
-![](./img/Kipper-CLI-Analyse-ACD.png)
+[Kipper-CLI-Analyse-ACD.png](./img/Kipper-CLI-Analyse-ACD.png)
 
 ##### Command `run`
 
-![](./img/Kipper-CLI-Run-ACD.png)
+[Kipper-CLI-Run-ACD.png](./img/Kipper-CLI-Run-ACD.png)
 
-#### 2.5.2 Unterschiede von `compile` zu den anderen Commands
+#### 2.8.2 Unterschiede von `compile` zu den anderen Commands
 
 Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
 Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
@@ -281,9 +284,9 @@ Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich je
 Kipper kann ähnlich wie im Node.js Use-Case auch als Web Bundle im Browser verwendet werden. Das bedeutet das der Kipper
 code in einem Browser zu JavaScript/TypeScript kompiliert werden kann, sowohl als auch ausgeführt werden kann.
 
-#### 2.6.1 Workflow
+#### 2.9.1 Workflow
 
-![](./img/Kipper-Web-ACD.png)
+[Kipper-Web-ACD.png](./img/Kipper-Web-ACD.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
