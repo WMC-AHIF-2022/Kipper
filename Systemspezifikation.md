@@ -1,4 +1,4 @@
-# System-Spezifikation Kipper
+[# System-Spezifikation Kipper
 
 ## Inhaltsverzeichnis
 
@@ -233,7 +233,7 @@ Sektionen genauer beschrieben.
 
 Da Kipper primär für den Web- und Server-Bereich gedacht ist, ist es wichtig, dass Kipper auch in Node.js Projekten
 verwendbar ist. Das bedeutet das Kipper mit Node.js zusammen verwendet werden kann und auch direkt Node-kompatiblen
-Code erzeugen kann, was die Entwicklung von Programmen auf der Server-Seite mit Kipper ermöglicht.
+Code erzeugen soll, was die Entwicklung von Programmen auf der Server-Seite mit Kipper ermöglicht.
 
 [Kipper-Node-Application-ACD.png](./img/Kipper-Node-Application-ACD.png)
 
@@ -292,11 +292,11 @@ CLI Interfaces und im Verhalten unterscheiden.
 
 ACD Diagramme der einzelnen Commands:
 
-- `compile`: [Kipper-CLI-Compile-ACD.pn](./img/Kipper-CLI-Compile-ACD.png)
+- `compile`: [Kipper-CLI-Compile-ACD.png](./img/Kipper-CLI-Compile-ACD.png)
 - `analyse`: [Kipper-CLI-Analyse-ACD.png](./img/Kipper-CLI-Analyse-ACD.png)
 - `run`: [Kipper-CLI-Run-ACD.png](./img/Kipper-CLI-Run-ACD.png)
 
-#### 2.8.2 Beschreibung der einzelnen Commands
+#### 2.8.1 Beschreibung der einzelnen Commands
 
 Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
 Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
@@ -337,3 +337,4 @@ werden dann aber nur bestimmte Einstellungen ändern können und nicht alle, da 
 ## 5. Systemarchitektur
 
 <!-- TODO! -->
+]()
