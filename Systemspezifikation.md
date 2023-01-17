@@ -235,7 +235,7 @@ Da Kipper primär für den Web- und Server-Bereich gedacht ist, ist es wichtig, 
 verwendbar ist. Das bedeutet das Kipper mit Node.js zusammen verwendet werden kann und auch direkt Node-kompatiblen
 Code erzeugen kann, was die Entwicklung von Programmen auf der Server-Seite mit Kipper ermöglicht.
 
-[Kipper-Use-Case-Node-Application.png](./img/Kipper-Use-Case-Node-Application.png)
+[Kipper-Node-Application-ACD.png](./img/Kipper-Node-Application-ACD.png)
 
 ### 2.3 Use Case - Entwicklung Deno Application
 
@@ -243,16 +243,16 @@ Deno ist eine neue JavaScript Runtime, die Node.js in vielen Bereichen ähnlich 
 mitbringt. Da Deno in den letzten Jahren immer populärer wurde, wäre es auch vom Vorteil diese Runtime mit direkten
 Compiler Support zu unterstützen, damit Deno Programme direkt mit Kipper geschrieben werden können.
 
-[Kipper-Use-Case-Deno-Application.png](./img/Kipper-Use-Case-Deno-Application.png)
+[Kipper-Deno-Application-ACD.png](./img/Kipper-Deno-Application-ACD.png)
 
 ### 2.4 Use Case - Entwicklung Bun Application
 
 Bun ist neben Deno auch eine relativ neue Runtime für JavaScript, welche viele Optimierungen und Verbesserungen 
-gegenüber Node.js bietet und auch viel Potential für Server-Side Entwicklung zeigt. Da auch das Module System relativ 
+gegenüber Node.js bietet und auch viel Potenzial für Server-Side Entwicklung zeigt. Da auch das Module System relativ 
 ähnlich zu Node.js ist soll Kipper auch ein Compile Target für Bun anbietet, wo Kompilierungen ohne viel Aufwand möglich
 sein sollten.
 
-[Kipper-Use-Case-Bun-Application.png](./img/Kipper-Use-Case-Bun-Application.png)
+[Kipper-Bun-Application-ACD.png](./img/Kipper-Bun-Application-ACD.png)
 
 ### 2.5 Use Case - Entwicklung Browser Application
 
@@ -261,7 +261,7 @@ modernen Browser schon implementiert wurde, und moderne Browser APIs unterstütz
 Scripts mit Kipper zu schreiben und diese in HTML Dateien als JavaScript einzubinden (Möglicherweise auch mit Support
 von Tools wie Parcel, damit die Kompilierung vereinfacht wird).
 
-[Kipper-Use-Case-Browser-Application.png](./img/Kipper-Use-Case-Browser-Application.png)
+[Kipper-Browser-Application-ACD.png](./img/Kipper-Browser-Application-ACD.png)
 
 ### 2.6 Use Case - Code Analyse
 
@@ -271,7 +271,9 @@ Fehlermeldungen erzeugen, sowohl als auch auf mögliche Probleme (Warnings) aufm
 Bereich von IDEs, wie JetBrains IDEs und VSCode, möglich sein.
 
 Genaue Details der Implementierung kommen jedoch auf die Umgebung an, aber der Kipper Compiler an sich soll Logging in
-der Konsole, aber auch mit Hilfe von vorgesehenen Text und JSON-Dateien erlauben.
+der Konsole, aber auch mithilfe von vorgesehenen Text und JSON-Dateien erlauben.
+
+[Kipper-Code-Analysis-ACD.png](./img/Kipper-Code-Analysis-ACD.png)
 
 ### 2.7 Use Case - Using Node.js Compiler
 
@@ -313,6 +315,16 @@ viel effizienter und einfacher sind, als Client-Side Kompilierungen.
 [Kipper-Web-ACD.png](./img/Kipper-Web-ACD.png)
 
 ### 2.10 Use Case - Configure Kipper Compiler
+
+Da der Kipper Compiler sehr flexibel und anpassbar sein soll, soll es auch möglich sein den Compiler zu konfigurieren.
+Das bedeutet es soll eine Konfigurationsdatei geben, welche die Compiler Einstellungen und Optionen spezifiziert, aber
+auch bestimmte Module und Plugins laden kann. Die Konfigurationsdatei soll im JSON-Format sein, und sollte auch
+einfach zu bearbeiten sein.
+
+Neben der Datei soll es auch möglich sein einfache Flags beim CLI zu verwenden, um den Compiler zu konfigurieren. Diese
+werden dann aber nur bestimmte Einstellungen ändern können und nicht alle, da die Flags mit Limitierungen verbunden sind.
+
+[Kipper-Configuration-ACD.png](./img/Kipper-Configuration-ACD.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
