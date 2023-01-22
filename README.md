@@ -5,6 +5,8 @@ The Kipper programming language for Browsers and Node.js! 🦊
 
 Kipper is a JavaScript-like strongly and strictly typed language with Python flavour. It aims to provide straightforward, simple, secure and type-safe coding with better efficiency and developer satisfaction!
 
+It compiles to both JavaScript and TypeScript, and can be set up in your terminal, Node.js or ES6+ browser. 🦊
+
 ## Compiler Repository
 
 Since Kipper is a project that already has been started, the main repository exists:
