@@ -252,10 +252,10 @@ Support für das Deno ESM System.
 
 ### 2.4 Use Case - Bun Application Development
 
-Bun ist neben Deno auch eine relativ neue Runtime für JavaScript, welche viele Optimierungen und Verbesserungen 
-gegenüber Node.js bietet und auch viel Potenzial für Server-Side Entwicklung zeigt. Da auch das Module System relativ 
-ähnlich zu Node.js ist soll Kipper auch ein Compile Target für Bun anbietet, wo Kompilierungen ohne viel Aufwand möglich
-sein sollten.
+Bun ist neben Deno auch eine relativ neue Runtime für JavaScript, welche viele Optimierungen und Verbesserungen
+gegenüber Node.js bietet und auch viel Potenzial für Server-Side Entwicklung zeigt. Da auch das Module-System relativ
+ähnlich zu Node.js ist, soll Kipper auch ein Compile Target für Bun anbietet, wo Kompilierungen ohne viel Aufwand 
+möglich sein sollten.
 
 [Kipper-Bun-Application-ACD.png](./img/Kipper-Bun-Application-ACD.png)
 
