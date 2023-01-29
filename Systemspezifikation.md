@@ -224,10 +224,11 @@ Quelle. Diese können mit einem Klick auf das Link geöffnet werden.*
 
 ![Kipper-Use Case-Diagram.png](./img/Kipper-Use-Case-Diagram.png)
 
-Die oben dargestellten Use Cases sind die wichtigsten Use Cases, die Kipper als Projekt unterstützen soll. Diese Use 
-Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des Compilers, jedoch beschreiben aber nur 
-die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese Details werden in den folgenden 
-Sektionen genauer beschrieben.
+Die oben dargestellten Use Cases sind die Hauptziele für die Entwicklung von Kipper und sollen direkt in die Planung und
+Entwicklung einbezogen werden. Diese Ziele sind daher auch die wichtigsten Anforderungen an die Implementierung des 
+Compilers, da der Compiler ohne großen Schwierigkeiten diese Use Cases unterstützen soll.
+
+Die genauen Details der einzelnen Use Cases werden in den folgenden Sektionen genauer beschrieben.
 
 ### 2.2 Use Case - Node.js Application Development
 
