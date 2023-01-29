@@ -232,9 +232,10 @@ Die genauen Details der einzelnen Use Cases werden in den folgenden Sektionen ge
 
 ### 2.2 Use Case - Node.js Application Development
 
-Da Kipper primär für den Web- und Server-Bereich gedacht ist, ist es wichtig, dass Kipper auch in Node.js Projekten
-verwendbar ist. Das bedeutet das Kipper mit Node.js zusammen verwendet werden kann und auch direkt Node-kompatiblen
-Code erzeugen soll, was die Entwicklung von Programmen auf der Server-Seite mit Kipper ermöglicht.
+Da Kipper primär für den Web- und Server-Bereich gedacht ist, soll Kipper in der Lage sein Node.js Projekte verwalten zu
+können und ausführbaren JavaScript oder TypeScript Code (Im Falle von `ts-node`) generieren zu können. Hier soll auch 
+die Möglichkeit vorhanden sein, existierende Node.js Libraries und Code mithilfe von ESM oder CommonJS, sowohl als auch 
+dem NPM/Node.js Module System importieren zu können.
 
 [Kipper-Node-Application-ACD.png](./img/Kipper-Node-Application-ACD.png)
 
