@@ -245,6 +245,9 @@ Deno ist eine neue JavaScript Runtime, die Node.js in vielen Bereichen ähnlich 
 mitbringt. Da Deno in den letzten Jahren immer populärer wurde, wäre es auch vom Vorteil diese Runtime mit direkten
 Compiler Support zu unterstützen, damit Deno Programme direkt mit Kipper geschrieben werden können.
 
+Daher soll auch das Deno Module System unterstützt werden, mit auch Type-Sicherheit für importierte Libraries und vollen
+Support für das Deno ESM System.
+
 [Kipper-Deno-Application-ACD.png](./img/Kipper-Deno-Application-ACD.png)
 
 ### 2.4 Use Case - Bun Application Development
