@@ -316,15 +316,18 @@ viel effizienter und einfacher sind, als Client-Side Kompilierungen.
 
 ### 2.10 Use Case - Configure Kipper Compiler
 
-Da der Kipper Compiler sehr flexibel und anpassbar sein soll, soll es auch möglich sein den Compiler zu konfigurieren.
-Das bedeutet es soll eine Konfigurationsdatei geben, welche die Compiler Einstellungen und Optionen spezifiziert, aber
-auch bestimmte Module und Plugins laden kann. Die Konfigurationsdatei soll im JSON-Format sein, und sollte auch
-einfach zu bearbeiten sein.
+Da das Verhalten des Kipper Compilers sehr flexibel und leicht anpassbar für Entwickler sein soll, soll ein
+vordefinierter Weg für die Konfiguration bereitgestellt werden.
 
-Neben der Datei soll es auch möglich sein einfache Flags beim CLI zu verwenden, um den Compiler zu konfigurieren. Diese
-werden dann aber nur bestimmte Einstellungen ändern können und nicht alle, da die Flags mit Limitierungen verbunden sind.
+Das bedeutet es soll:
+- Erstens, eine Konfigurationsdatei geben, welche die Compiler Einstellungen und Optionen spezifiziert, aber auch 
+  bestimmte Module und Plugins definieren kann, die dann vom Compiler geladen werden sollen. Diese Konfigurationsdatei
+  soll im JSON-Format sein und soll ähnlich zu anderen Tools im Root-Ordner eines Projektes vorhanden sein.
+- Zweitens, verwendbare Flags bei den verschiedenen CLI Commands vorhanden sein, welche ähnlich wie zur 
+  Konfigurationsdatei das Verhalten des Compilers konfigurieren können. Diese werden aber nur bestimmte Einstellungen 
+  ändern können, da die Flags mit Limitierungen verbunden sind, wie schwäre Repräsentation von Objekten in der Konsole.
 
-[Kipper-Configuration-ACD.png](./img/Kipper-Configuration-ACD.png)
+- [Kipper-Configuration-ACD.png](./img/Kipper-Configuration-ACD.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
