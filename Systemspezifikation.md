@@ -263,15 +263,17 @@ von Tools wie Parcel, damit die Kompilierung vereinfacht wird).
 
 [Kipper-Browser-Application-ACD.png](./img/Kipper-Browser-Application-ACD.png)
 
-### 2.6 Use Case - Code Analyse
+### 2.6 Use Case - Code Analysis
 
-Neben der Kompilierung und Erstellung von Programmen soll Kipper auch einfache Code Analyse Funktionalitäten besitzen.
-Speziell im Rahmen von IDE-Checks und Compile-Time Logging soll Kipper aktiv Code analysieren können und 
-Fehlermeldungen erzeugen, sowohl als auch auf mögliche Probleme (Warnings) aufmerksam machen. Das speziell soll im
-Bereich von IDEs, wie JetBrains IDEs und VSCode, möglich sein.
+Neben der Kompilierung und Erstellung von Programmen soll Kipper auch einfache Code Analyse Funktionalitäten besitzen, 
+um auch schnelle Checks durchzuführen zu können ohne irgendwelche Code-Erzeugung. Speziell im Rahmen von Code-Checks e.g. 
+Semantic-Check/Type-Check Logging soll Kipper aktiv Code analysieren können und Fehlermeldungen erzeugen, sowohl als 
+auch auf mögliche Probleme (Warnings) aufmerksam machen. Das soll im Bereich von IDEs und Code-Editoren, wie JetBrains 
+IDEs und VSCode, es erlauben, dass Plugins entwickelt werden können, die die Entwicklung mit Kipper vereinfachen.
 
-Genaue Details der Implementierung kommen jedoch auf die Umgebung an, aber der Kipper Compiler an sich soll Logging in
-der Konsole, aber auch mithilfe von vorgesehenen Text und JSON-Dateien erlauben.
+Genaue Details der Form des Outputs kommen jedoch auf die Umgebung an, aber der Kipper Compiler an sich soll Standard 
+Konsolen-Logging mit dem CLI erlauben und benutzerdefiniertes Verhalten unterstützen mithilfe von spezieller Compiler 
+Konfiguration.
 
 [Kipper-Code-Analysis-ACD.png](./img/Kipper-Code-Analysis-ACD.png)
 
