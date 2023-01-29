@@ -286,7 +286,7 @@ kann und mehr Optionen ermöglicht als die Flags beim CLI (Command Line Interfac
 
 ### 2.8 Use Case - Using Kipper CLI
 
-Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use-Case-Diagram 
+Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use Case-Diagram 
 dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
 CLI Interfaces und im Verhalten unterscheiden.
 
@@ -300,8 +300,11 @@ ACD Diagramme der einzelnen Commands:
 
 Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
 Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
-- `analyse` führt *nur* Syntax-Checks durch, ohne Target-Code zu generieren.
-- `run` kompiliert den Code und führt ihn direkt aus, und gibt auch keine Logs aus außer bei Compiler Fehlern.
+- `analyse` führt Syntax-Checks und Semantic-Checks (Logische-Checks und Type-Checks) durch, ohne Target-Code zu 
+  generieren.
+- `run` kompiliert den Code und führt ihn direkt aus, ohne Logs zu erzeugen (Mit Ausnahme bei Compiler Fehlern). E.g.
+  on-demand direkte Kompilierung und Ausführung von Code. Dieser Command ist vor allem für Debugging und Testing
+  gedacht, da er fürs schnelle Ausführen von Code sehr gut geeignet ist.
 
 ### 2.9 Use Case - Using Web Bundle Compiler
 
