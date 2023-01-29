@@ -9,11 +9,11 @@
   - [1.4 Zielsetzung](#14-zielsetzung)
 - [2. Funktionale Anforderungen](#2-funktionale-anforderungen)
   - [2.1 Use Case Überblick](#21-use-case-überblick)
-  - [2.2 Use Case - Entwicklung Node.js Application](#22-use-case---entwicklung-nodejs-application)
-  - [2.3 Use Case - Entwicklung Deno Application](#23-use-case---entwicklung-deno-application)
-  - [2.4 Use Case - Entwicklung Bun Application](#24-use-case---entwicklung-bun-application)
-  - [2.5 Use Case - Entwicklung Browser Application](#25-use-case---entwicklung-browser-application)
-  - [2.6 Use Case - Code Analyse](#26-use-case---code-analyse)
+  - [2.2 Use Case - Node.js Application Development](#22-use-case---nodejs-application-development)
+  - [2.3 Use Case - Deno Application Development](#23-use-case---deno-application-development)
+  - [2.4 Use Case - Bun Application Development](#24-use-case---bun-application-development)
+  - [2.5 Use Case - Browser Application Development](#25-use-case---browser-application-development)
+  - [2.6 Use Case - Code Analysis](#26-use-case---code-analysis)
   - [2.7 Use Case - Using Node.js Compiler](#27-use-case---using-nodejs-compiler)
   - [2.8 Use Case - Using Kipper CLI](#28-use-case---using-kipper-cli)
   - [2.9 Use Case - Using Web Bundle Compiler](#29-use-case---using-web-bundle-compiler)
@@ -222,14 +222,14 @@ Quelle. Diese können mit einem Klick auf das Link geöffnet werden.*
 
 ### 2.1 Use Case Überblick
 
-![Kipper-Use-Case-Diagram.png](./img/Kipper-Use-Case-Diagram.png)
+![Kipper-Use Case-Diagram.png](./img/Kipper-Use-Case-Diagram.png)
 
 Die oben dargestellten Use Cases sind die wichtigsten Use Cases, die Kipper als Projekt unterstützen soll. Diese Use 
 Cases sind daher auch die wichtigsten Anforderungen an die Implementierung des Compilers, jedoch beschreiben aber nur 
 die ungefähren Anforderungen an den Compiler und nicht die genauen Details. Diese Details werden in den folgenden 
 Sektionen genauer beschrieben.
 
-### 2.2 Use Case - Entwicklung Node.js Application
+### 2.2 Use Case - Node.js Application Development
 
 Da Kipper primär für den Web- und Server-Bereich gedacht ist, ist es wichtig, dass Kipper auch in Node.js Projekten
 verwendbar ist. Das bedeutet das Kipper mit Node.js zusammen verwendet werden kann und auch direkt Node-kompatiblen
@@ -237,7 +237,7 @@ Code erzeugen soll, was die Entwicklung von Programmen auf der Server-Seite mit 
 
 [Kipper-Node-Application-ACD.png](./img/Kipper-Node-Application-ACD.png)
 
-### 2.3 Use Case - Entwicklung Deno Application
+### 2.3 Use Case - Deno Application Development
 
 Deno ist eine neue JavaScript Runtime, die Node.js in vielen Bereichen ähnlich ist, aber auch einige neue Features
 mitbringt. Da Deno in den letzten Jahren immer populärer wurde, wäre es auch vom Vorteil diese Runtime mit direkten
@@ -245,7 +245,7 @@ Compiler Support zu unterstützen, damit Deno Programme direkt mit Kipper geschr
 
 [Kipper-Deno-Application-ACD.png](./img/Kipper-Deno-Application-ACD.png)
 
-### 2.4 Use Case - Entwicklung Bun Application
+### 2.4 Use Case - Bun Application Development
 
 Bun ist neben Deno auch eine relativ neue Runtime für JavaScript, welche viele Optimierungen und Verbesserungen 
 gegenüber Node.js bietet und auch viel Potenzial für Server-Side Entwicklung zeigt. Da auch das Module System relativ 
@@ -254,7 +254,7 @@ sein sollten.
 
 [Kipper-Bun-Application-ACD.png](./img/Kipper-Bun-Application-ACD.png)
 
-### 2.5 Use Case - Entwicklung Browser Application
+### 2.5 Use Case - Browser Application Development
 
 Neben der Unterstützung von Server-Side JavaScript Runtimes soll Kipper auch Browser JavaScript ES6+, was für alle 
 modernen Browser schon implementiert wurde, und moderne Browser APIs unterstützen. Das bedeutet es soll möglich sein
