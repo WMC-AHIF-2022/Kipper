@@ -278,9 +278,9 @@ der Konsole, aber auch mithilfe von vorgesehenen Text und JSON-Dateien erlauben.
 ### 2.7 Use Case - Using Node.js Compiler
 
 Da der Kipper Compiler primär im Node.js Umfeld entwickelt wird, soll es auch möglich sein den Compiler direkt als 
-Node.js Modul zu importieren und verwenden zu können. Dieser Use-Case der Compiler Library soll damit auch die 
-meiste Flexibilität einer Kipper Kompilierung anbieten, da das Verhalten selber auch bearbeitet/konfiguriert werden 
-kann und mehr Optionen ermöglicht als die Flags beim CLI (Command Line Interface).
+Node.js Modul zu importieren und verwenden zu können. Dieser Use Case soll auch erlauben direkt in das Verhalten des
+Compilers einzugreifen, um z.B. eigene Compiler Plugins zu implementieren, um die Funktionalität des Compilers zu
+erweitern. Dieser "Plugin Use Case" ist jedoch nicht primär, sondern eher ein Nebenprodukt des Projekts.
 
 [Kipper-NodeJS-ACD.png](./img/Kipper-NodeJS-ACD.png)
 
