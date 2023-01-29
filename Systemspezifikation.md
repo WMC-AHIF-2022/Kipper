@@ -305,12 +305,14 @@ Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich je
 
 ### 2.9 Use Case - Using Web Bundle Compiler
 
-Der Kipper Compiler kann ähnlich wie im Node.js Use-Case auch als Web Bundle im Browser verwendet werden. Das bedeutet 
-das der Kipper Code direkt in einem Browser zu JavaScript/TypeScript kompiliert werden kann, sowohl als auch ausgeführt 
-werden kann.
+Um eine breite Auswahl an Anwendungsmöglichkeiten zu erlauben, soll der Kipper Compiler auch ähnlich wie im Node.js Use 
+Case auch als Web Bundle im Browser verwendbar sein. Das bedeutet, dass Kipper Code direkt in einem Browser Fenster 
+mithilfe des Web Bundles zu JavaScript/TypeScript kompiliert werden soll.
 
-Dieser Use-Case sollte normalerweise nur in bestimmten Fällen zu Nützen kommen, da Kompilierungen mit dem CLI oder lokal
-viel effizienter und einfacher sind, als Client-Side Kompilierungen.
+Dieser Use Case sollte normalerweise jedoch nur in bestimmten Fällen zu nützen kommen, da Kompilierungen mit dem CLI 
+oder lokal viel effizienter und einfacher sind, als client-side on-request Kompilierungen. Für Online-Texteditors oder
+dynamische Programme im Browser wird aber solch eine Kompilierung wichtig sein, da diese auf keine lokalen 
+Installationen von Node.js, Deno oder Bun zurückgreifen können.
 
 [Kipper-Web-ACD.png](./img/Kipper-Web-ACD.png)
 
