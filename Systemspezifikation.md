@@ -9,15 +9,9 @@
   - [1.4 Zielsetzung](#14-zielsetzung)
 - [2. Funktionale Anforderungen](#2-funktionale-anforderungen)
   - [2.1 Use Case Überblick](#21-use-case-überblick)
-  - [2.2 Use Case - Node.js Application Development](#22-use-case---nodejs-application-development)
-  - [2.3 Use Case - Deno Application Development](#23-use-case---deno-application-development)
-  - [2.4 Use Case - Bun Application Development](#24-use-case---bun-application-development)
-  - [2.5 Use Case - Browser Application Development](#25-use-case---browser-application-development)
-  - [2.6 Use Case - Code Analysis](#26-use-case---code-analysis)
-  - [2.7 Use Case - Using Node.js Compiler](#27-use-case---using-nodejs-compiler)
-  - [2.8 Use Case - Using Kipper CLI](#28-use-case---using-kipper-cli)
-  - [2.9 Use Case - Using Web Bundle Compiler](#29-use-case---using-web-bundle-compiler)
-  - [2.10 Use Case - Configure Kipper Compiler](#210-use-case---configure-kipper-compiler)
+  - [2.2 Use Case - Desktop Application Development](#22-use-case---desktop-application-development)
+  - [2.3 Use Case - Web Application Development](#23-use-case---web-application-development)
+  - [2.4 Use Case - Running Kipper Application](#24-use-case---running-kipper-application)
 - [3. Nicht-funktionale Anforderungen](#3-nicht-funktionale-anforderungen)
 - [4. Mengengerüst](#4-mengengerüst)
 - [5. Systemarchitektur](#5-systemarchitektur)
@@ -230,116 +224,34 @@ Compilers, da der Compiler ohne großen Schwierigkeiten diese Use Cases unterst�
 
 Die genauen Details der einzelnen Use Cases werden in den folgenden Sektionen genauer beschrieben.
 
-### 2.2 Use Case - Node.js Application Development
+### 2.2 Use Case - Desktop Application Development
 
 Da Kipper primär für den Web- und Server-Bereich gedacht ist, soll Kipper in der Lage sein Node.js Projekte verwalten zu
-können und ausführbaren JavaScript oder TypeScript Code (Im Falle von `ts-node`) generieren zu können. Hier soll auch 
-die Möglichkeit vorhanden sein, existierende Node.js Libraries und Code mithilfe von ESM oder CommonJS, sowohl als auch 
-dem NPM/Node.js Module System importieren zu können.
+können und ausführbaren JavaScript oder TypeScript Code (Im Falle der Verwendung von `ts-node`) anhand Kipper Dateien 
+generieren zu können. Hier soll auch die Möglichkeit vorhanden sein, existierende Node.js Libraries und Code mithilfe 
+von ESM oder CommonJS, sowohl als auch dem NPM/Node.js Module System importieren zu können.
 
-[Kipper-Node-Application-ACD.png](./img/Kipper-Node-Application-ACD.png)
+![Kipper-Desktop-Application-Development.png](./img/Kipper-Desktop-Application-Development-ACD.png)
 
-### 2.3 Use Case - Deno Application Development
+### 2.3 Use Case - Web Application Development
 
-Deno ist eine neue JavaScript Runtime, die Node.js in vielen Bereichen ähnlich ist, aber auch einige neue Features
-mitbringt. Da Deno in den letzten Jahren immer populärer wurde, wäre es auch vom Vorteil diese Runtime mit direkten
-Compiler Support zu unterstützen, damit Deno Programme direkt mit Kipper geschrieben werden können.
+Neben der Unterstützung von Server-Side JavaScript Runtimes soll Kipper auch Browser JavaScript ES6+ (was für alle
+modernen Browser schon implementiert wurde) und moderne Browser APIs unterstützen. Das bedeutet es soll möglich sein
+Scripts mit Kipper zu schreiben und diese in HTML Dateien als JavaScript einzubinden.
 
-Daher soll auch das Deno Module System unterstützt werden, mit auch Type-Sicherheit für importierte Libraries und vollen
-Support für das Deno ESM System.
+![Kipper-Web-Application-Development.png](./img/Kipper-Web-Application-Development-ACD.png)
 
-[Kipper-Deno-Application-ACD.png](./img/Kipper-Deno-Application-ACD.png)
+### 2.4 Use Case - Running Kipper Application
 
-### 2.4 Use Case - Bun Application Development
+Nachdem Kipper Code kompiliert wurde, soll es möglich sein, die generierten JavaScript oder TypeScript Dateien 
+auszuführen. Dies kann entweder direkt mit einer JavaScript/TypeScript Runtime, oder mit dem Kipper CLI Tool 
+(`kipper run`) gemacht werden.
 
-Bun ist neben Deno auch eine relativ neue Runtime für JavaScript, welche viele Optimierungen und Verbesserungen
-gegenüber Node.js bietet und auch viel Potenzial für Server-Side Entwicklung zeigt. Da auch das Module-System relativ
-ähnlich zu Node.js ist, soll Kipper auch ein Compile Target für Bun anbietet, wo Kompilierungen ohne viel Aufwand 
-möglich sein sollten.
+Im Falle des CLI Tools werden die Dateien sofort kompiliert und auch ausgeführt, ohne die generierten Dateien 
+spezifizieren zu müssen, da es im gleichen Prozess den generierten Code einfach mithilfe einer JavaScript Runtime
+ausführt.
 
-[Kipper-Bun-Application-ACD.png](./img/Kipper-Bun-Application-ACD.png)
-
-### 2.5 Use Case - Browser Application Development
-
-Neben der Unterstützung von Server-Side JavaScript Runtimes soll Kipper auch Browser JavaScript ES6+, was für alle 
-modernen Browser schon implementiert wurde, und moderne Browser APIs unterstützen. Das bedeutet es soll möglich sein
-Scripts mit Kipper zu schreiben und diese in HTML Dateien als JavaScript einzubinden (Möglicherweise auch mit Support
-von Tools wie Parcel, damit die Kompilierung vereinfacht wird).
-
-[Kipper-Browser-Application-ACD.png](./img/Kipper-Browser-Application-ACD.png)
-
-### 2.6 Use Case - Code Analysis
-
-Neben der Kompilierung und Erstellung von Programmen soll Kipper auch einfache Code Analyse Funktionalitäten besitzen, 
-um auch schnelle Checks durchzuführen zu können ohne irgendwelche Code-Erzeugung. Speziell im Rahmen von Code-Checks e.g. 
-Semantic-Check/Type-Check Logging soll Kipper aktiv Code analysieren können und Fehlermeldungen erzeugen, sowohl als 
-auch auf mögliche Probleme (Warnings) aufmerksam machen. Das soll im Bereich von IDEs und Code-Editoren, wie JetBrains 
-IDEs und VSCode, es erlauben, dass Plugins entwickelt werden können, die die Entwicklung mit Kipper vereinfachen.
-
-Genaue Details der Form des Outputs kommen jedoch auf die Umgebung an, aber der Kipper Compiler an sich soll Standard 
-Konsolen-Logging mit dem CLI erlauben und benutzerdefiniertes Verhalten unterstützen mithilfe von spezieller Compiler 
-Konfiguration.
-
-[Kipper-Code-Analysis-ACD.png](./img/Kipper-Code-Analysis-ACD.png)
-
-### 2.7 Use Case - Using Node.js Compiler
-
-Da der Kipper Compiler primär im Node.js Umfeld entwickelt wird, soll es auch möglich sein den Compiler direkt als 
-Node.js Modul zu importieren und verwenden zu können. Dieser Use Case soll auch erlauben direkt in das Verhalten des
-Compilers einzugreifen, um z.B. eigene Compiler Plugins zu implementieren, um die Funktionalität des Compilers zu
-erweitern. Dieser "Plugin Use Case" ist jedoch nicht primär, sondern eher ein Nebenprodukt des Projekts.
-
-[Kipper-NodeJS-ACD.png](./img/Kipper-NodeJS-ACD.png)
-
-### 2.8 Use Case - Using Kipper CLI
-
-Die folgenden drei Punkte beschreiben alle drei Haupt-Commands (Konsolenbefehle) des CLI, die auch im Use Case-Diagram 
-dargestellt sind. Da die interne Struktur sehr ähnlich ist, werden sie sich nur minimal in der Implementierung des
-CLI Interfaces und im Verhalten unterscheiden.
-
-ACD Diagramme der einzelnen Commands:
-
-- `compile`: [Kipper-CLI-Compile-ACD.png](./img/Kipper-CLI-Compile-ACD.png)
-- `analyse`: [Kipper-CLI-Analyse-ACD.png](./img/Kipper-CLI-Analyse-ACD.png)
-- `run`: [Kipper-CLI-Run-ACD.png](./img/Kipper-CLI-Run-ACD.png)
-
-#### 2.8.1 Beschreibung der einzelnen Commands
-
-Neben den Command `compile`, welcher eine normale Kompilierung ausführt und den erzeugten Code ausgibt, werden auch die
-Commands `analyse` und `run` implementiert. Diese Commands unterscheiden sich jedoch von `compile` in folgenden Punkten:
-- `analyse` führt Syntax-Checks und Semantic-Checks (Logische-Checks und Type-Checks) durch, ohne Target-Code zu 
-  generieren.
-- `run` kompiliert den Code und führt ihn direkt aus, ohne Logs zu erzeugen (Mit Ausnahme bei Compiler Fehlern). E.g.
-  on-demand direkte Kompilierung und Ausführung von Code. Dieser Command ist vor allem für Debugging und Testing
-  gedacht, da er fürs schnelle Ausführen von Code sehr gut geeignet ist.
-
-### 2.9 Use Case - Using Web Bundle Compiler
-
-Um eine breite Auswahl an Anwendungsmöglichkeiten zu erlauben, soll der Kipper Compiler auch ähnlich wie im Node.js Use 
-Case auch als Web Bundle im Browser verwendbar sein. Das bedeutet, dass Kipper Code direkt in einem Browser Fenster 
-mithilfe des Web Bundles zu JavaScript/TypeScript kompiliert werden soll.
-
-Dieser Use Case sollte normalerweise jedoch nur in bestimmten Fällen zu nützen kommen, da Kompilierungen mit dem CLI 
-oder lokal viel effizienter und einfacher sind, als client-side on-request Kompilierungen. Für Online-Texteditors oder
-dynamische Programme im Browser wird aber solch eine Kompilierung wichtig sein, da diese auf keine lokalen 
-Installationen von Node.js, Deno oder Bun zurückgreifen können.
-
-[Kipper-Web-ACD.png](./img/Kipper-Web-ACD.png)
-
-### 2.10 Use Case - Configure Kipper Compiler
-
-Da das Verhalten des Kipper Compilers sehr flexibel und leicht anpassbar für Entwickler sein soll, soll ein
-vordefinierter Weg für die Konfiguration bereitgestellt werden.
-
-Das bedeutet es soll:
-- Erstens, eine Konfigurationsdatei geben, welche die Compiler Einstellungen und Optionen spezifiziert, aber auch 
-  bestimmte Module und Plugins definieren kann, die dann vom Compiler geladen werden sollen. Diese Konfigurationsdatei
-  soll im JSON-Format sein und soll ähnlich zu anderen Tools im Root-Ordner eines Projektes vorhanden sein.
-- Zweitens, verwendbare Flags bei den verschiedenen CLI Commands vorhanden sein, welche ähnlich wie zur 
-  Konfigurationsdatei das Verhalten des Compilers konfigurieren können. Diese werden aber nur bestimmte Einstellungen 
-  ändern können, da die Flags mit Limitierungen verbunden sind, wie schwäre Repräsentation von Objekten in der Konsole.
-
-- [Kipper-Configuration-ACD.png](./img/Kipper-Configuration-ACD.png)
+![Kipper-Running-Kipper-Application.png](./img/Kipper-Running-Kipper-Application.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
@@ -352,4 +264,3 @@ Das bedeutet es soll:
 ## 5. Systemarchitektur
 
 <!-- TODO! -->
-]()
