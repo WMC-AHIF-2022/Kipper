@@ -251,7 +251,7 @@ Im Falle des CLI Tools werden die Dateien sofort kompiliert und auch ausgeführt
 spezifizieren zu müssen, da es im gleichen Prozess den generierten Code einfach mithilfe einer JavaScript Runtime
 ausführt.
 
-![Kipper-Running-Kipper-Application.png](./img/Kipper-Running-Kipper-Application.png)
+![Kipper-Running-Kipper-Application.png](./img/Kipper-Running-Kipper-Application-ACD.png)
 
 ## 3. Nicht-funktionale Anforderungen
 
