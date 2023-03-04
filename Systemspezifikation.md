@@ -1,4 +1,4 @@
-[# System-Spezifikation Kipper
+# System-Spezifikation Kipper
 
 ## Inhaltsverzeichnis
 
