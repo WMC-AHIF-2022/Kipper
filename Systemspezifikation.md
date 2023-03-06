@@ -255,7 +255,56 @@ ausführt.
 
 ## 3. Nicht-funktionale Anforderungen
 
-<!-- TODO! -->
+### `Usability`: Benutzbarkeitsanforderung
+
+Das Ziel von Kipper ist es, eine neue Sprache zu entwickeln, die einfach zu lernen und zu verwenden ist. Daher soll
+Kipper eine einfache Syntax haben, die sich leicht erlernen lässt und auch leicht zu lesen ist. Zudem soll der Aufwand
+zum Aufsetzen eines neuen Projekts mit Kipper möglichst gering sein, um die Sprache auch für Anfänger zugänglich zu
+machen.
+
+Speziell auch mit existierenden Projekten soll Kipper einfach integrierbar sein, wo auch existierender Code einfach
+importiert werden kann.
+
+### `Efficiency`: Effizienzanforderung
+
+Der Kipper Compiler soll wohl im Browser, aber auch auf dem Server ohne Performance-Probleme laufen können. Das bedeutet
+konkret bei einfachen Dateien sollen Kompilierungen weniger als 0.5-1 Sekunden dauern, bei größeren Projekten sollen
+Kompilierungen weniger als 5 Sekunden dauern.
+
+Auch beim Ausführen soll der Overhead von Kipper minimal sein, damit die Performance max. 10-15% schlechter ist als
+die Performance von z.B. Native JavaScript.
+
+### `Reliability`: Zuverlässigkeitsanforderung
+
+Kipper soll zuverlässig sein, was bedeutet, dass der Kipper Compiler keine Fehler machen soll, die zu Fehlern führen.
+Das bedeutet im generierten Overhead sollen keine unerwarteten Fehler aufkommen oder Side-Effects auftreten, die zu
+Problemen führen können.
+
+Das hat auch Wichtigkeit im Bereich der Kompatibilität mit andere Sprachen oder Libraries, da Kipper das Verhalten in
+einer Weise übernehmen muss, dass kein unerwartetes Verhalten auftreten kann.
+
+### `Security`: Sicherheitsanforderung
+
+Kipper soll eine möglichst sichere Sprache sein, was bedeutet, dass die Implementierung des Kipper-Compilers keine 
+Sicherheitslücken haben soll, die mögliche Angriffe auf das erstellte System ermöglichen. Da das jedoch unmöglich 
+100% der Fälle gewährleistet werden kann, sollen mögliche Sicherheitsprobleme auch meld-bar sein, damit diese behoben 
+werden können und auch die Benutzer informiert werden, wenn ein Problem auftreten kann.
+
+### `Legal`: Gesetzliche Anforderung
+
+Kipper ist ein Open-Source-Projekt, das unter der GPL-3.0 Lizenz veröffentlicht wird. Das bedeutet, dass der 
+Quellcode für alle zugänglich sein soll und auch jeder den Quellcode verändern und weiterverbreiten darf, aber auch das
+alle verwendeten Libraries auch angebracht integriert werden müssen, wo auch die Lizenz-Bedingungen es erlaubt.
+
+### `Documentation`: Dokumentationsanforderung
+
+Die Sprache, der Compiler und alle geschriebenen Libraries des Kipper-Projektes sollen gut dokumentiert sein, damit die 
+Benutzer einen guten Zugang zu den Implementierungsdetails haben und auch bei Unsicherheiten die Dokumentation als Hilfe
+nützen können. Speziell mit Kipper-spezifischen Features und Funktionen soll die Dokumentation die wichtigen Details
+klar und verständlich darstellen und zugänglich machen.
+
+Die Dokumentation soll online auf der Website, aber auch als Standard-Markdown-Dateien im GitHub Repository aufrufbar
+sein.
 
 ## 4. Mengengerüst
 
