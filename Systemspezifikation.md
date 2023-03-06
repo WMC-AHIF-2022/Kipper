@@ -13,8 +13,7 @@
   - [2.3 Use Case - Web Application Development](#23-use-case---web-application-development)
   - [2.4 Use Case - Running Kipper Application](#24-use-case---running-kipper-application)
 - [3. Nicht-funktionale Anforderungen](#3-nicht-funktionale-anforderungen)
-- [4. Mengengerüst](#4-mengengerüst)
-- [5. Systemarchitektur](#5-systemarchitektur)
+- [4. Systemarchitektur](#4-systemarchitektur)
 
 ## 1. Ausgangslage und Zielsetzung
 
@@ -306,10 +305,6 @@ klar und verständlich darstellen und zugänglich machen.
 Die Dokumentation soll online auf der Website, aber auch als Standard-Markdown-Dateien im GitHub Repository aufrufbar
 sein.
 
-## 4. Mengengerüst
-
-<!-- TODO! -->
-
-## 5. Systemarchitektur
+## 4. Systemarchitektur
 
 <!-- TODO! -->
