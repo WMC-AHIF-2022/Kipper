@@ -1,43 +1,48 @@
 # Projektstrukturplan
 
-## 1. Fertigstellung der Systemspezifikation
+## Grafischer Plan
 
-## 2. Entwicklung des Core Compiler Systems
+![](./img/Projektstrukturplan.png)
 
-### 2.1 Standard Syntax und Übersetzung 
+## Table-like Plan
 
-#### 2.1.1 Variablen
+### 1. Planung
 
-#### 2.1.2 Datentypen
+- 1.1 Systemspezifikation
+- 1.2 Roadmap & Projekt Stages
 
-#### 2.1.3 Operatoren
+### 2. Entwicklung Core Compiler System
 
-#### 2.1.4 Kontrollstrukturen (if, while, for)
+- 2.1 Standard Syntax und Übersetzung zu JS/TS
+  - 2.1.1 Variablen
+  - 2.1.2 Datentypen
+  - 2.1.3 Operatoren
+  - 2.1.4 Kontrollstrukturen (if, while, for)
+  - 2.1.5 Funktionen
 
-#### 2.1.5 Funktionen
+### 3. OOP Erweiterung
 
-## 3. OOP Erweiterung
+- 4.1 Objekte
+- 4.2 Interfaces
+- 4.3 Type Casts und Runtime Safety Checks
+- 4.4 Klassen und Constructor
+- 4.5 Vererbung
+- 4.6 Polymorphie
+- 4.7 Exceptions
 
-### 3.1 Objekte
+### 4. Support für JavaScript & TypeScript Dateien
 
-### 3.2 Interfaces
+- 5.1 File Resolution & Local/Package Import
+- 5.2 Import Support & Type Checks for JS
+- 5.3 TypeScript Type Interpretation
+- 5.4 Type Definition (\*.d.ts) Dateien Support
 
-### 3.3 Type Casts und Runtime Safety Checks
+### 5. Fertigstellung & Aufbereitung Dokumentation
 
-### 3.4 Klassen und Constructor
+- 6.1 Markdown Dokumentation Finalisierung
+- 6.2 Website Docs Finalisierung
 
-### 3.5 Vererbung
+### 6. Präsentation
 
-### 3.6 Polymorphie
-
-### 3.7 Exceptions
-
-## 4. Erweiterung Support für JavaScript & TypeScript Dateien
-
-### 4.1 JavaScript
-
-### 4.2 TypeScript und d.ts Dateien
-
-## 5. Dokumentation
-
-## 6. Präsentation und Show-case der Features
+- 7.1 Vorbereitung Präsentation
+- 7.2 Vorbereitung Live Demo - "Kipper in Action"
