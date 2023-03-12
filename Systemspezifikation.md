@@ -307,4 +307,4 @@ sein.
 
 ## 4. Systemarchitektur
 
-<!-- TODO! -->
+![](./img/Kipper-System-Architecture.png)
